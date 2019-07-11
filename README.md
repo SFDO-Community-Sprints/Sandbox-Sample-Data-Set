@@ -1,19 +1,19 @@
-### Click the Edit button and then copy & paste the Project README template below into your Project Repository README.md file.
-***
-
 ### Project Name
-Choose a self-explaining name for your project.
+Sandbox Data Tool
 
 ### Project Description
-Let people know what your project can do and the intended benefits. 
+This preparatory work describes use cases for a sandbox data tool: sample business processes, what kinds of objects are needed to furnish those processes, and what kinds of sample data are needed for those objects.
 
 ### Project Audience
-Indicate who would find the most value in the use of this project.
+Admins who are developing and testing new business processes and need sample data for a sandbox.
 
 ### Project Team
 
-* Team Leader:
+* Team Leader: Michael Kolodner
 * List of Contributors:
+** Michelle Northrup
+** Rita Leverett
+** Victoria Tang
 
 ### Project Team Accomplishments
 What did the Project Team accomplished during the Sprint?
