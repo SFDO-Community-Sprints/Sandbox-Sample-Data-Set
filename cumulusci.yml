@@ -1,0 +1,25 @@
+minimum_cumulusci_version: '2.5.4'
+project:
+    name: Sandbox-Data-Tool
+    package:
+        name:  Sandbox Data Sample Dataset
+        api_version: '46.0'
+    dependencies:
+        - github: 'https://github.com/SalesforceFoundation/Cumulus'
+
+tasks:
+    robot:
+        options:
+            suites: robot/Sandbox-Data-Tool/tests
+            options:
+                outputdir: robot/Sandbox-Data-Tool/results
+
+    robot_testdoc:
+        options:
+            path: robot/Sandbox-Data-Tool/tests
+            output: robot/Sandbox-Data-Tool/doc/Sandbox-Data-Tool_tests.html
+
+flows:
+    config_qa:
+        1.1:
+            task: deploy_qa_config

@@ -1,25 +1,12 @@
-### Project Name
-Sandbox Data Tool
+# Sandbox-Data-Tool
 
-### Project Description
-This preparatory work describes use cases for a sandbox data tool: sample business processes, what kinds of objects are needed to furnish those processes, and what kinds of sample data are needed for those objects.
+Add a brief description of this project here, in Markdown format.
+It will be shown on the main page of the project's GitHub repository.
 
-### Project Audience
-Admins who are developing and testing new business processes and need sample data for a sandbox.
+## Development
 
-### Project Team
+To work on this project in a scratch org:
 
-* Team Leader: Michael Kolodner
-* List of Contributors:
-** Michelle Northrup
-** Rita Leverett
-** Victoria Tang
-
-### Project Team Accomplishments
-What did the Project Team accomplished during the Sprint?
-
-### Contributing
-If someone were to contribute to this project at the next Sprint what would you want them to work on to move this project forward?
-
-### Project Roadmap
-What is the ultimate vision for this project?
+1. [Set up CumulusCI](https://cumulusci.readthedocs.io/en/latest/tutorial.html)
+2. Run `cci flow run dev_org --org dev` to deploy this project.
+3. Run `cci org browser dev` to open the org in your browser.
