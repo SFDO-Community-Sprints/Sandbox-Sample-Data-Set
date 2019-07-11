@@ -51,6 +51,6 @@ _Notes captured by @vtangToD during initial brainstorming and problem definition
 * Anything you can do in CCI, you should be able to do in MetaDeploy
 * Need to help people get to the point where CCI admin can run the automation (e.g. to load test data)
 * Interesting to try to create community-based data set for NPSP that we can publish in GitHub (and then people can use to populate their own scratch orgs)
-* Goal is to get more people trained up on this open-source community tool
+    * Also a good training asset to teach people how to load data sets from GitHub projects (which will help open source projects)* Goal is to get more people trained up on this open-source community tool
 * The weekly export tool can capture data (all tables, all fields) from a sandbox org
-
+    * But you’d still have to figure out the ordering of what data to load in which order, figure out the dependencies, etc., do it's not really any easier
