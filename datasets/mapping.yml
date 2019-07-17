@@ -1,45 +1,660 @@
-Insert Accounts:
+Insert npsp__Batch__c:
+  sf_object: npsp__Batch__c
+  table: batch__c
+  fields:
+    Name: name
+    npsp__Batch_Status__c: batch_status
+    npsp__Description__c: description
+    npsp__Number_of_Items__c: number_of_items
+    npsp__Object_Name__c: object_name
+Insert Account:
   sf_object: Account
-  table: accounts
+  table: account
   fields:
-    Name: Name
-    Description: Description
-    BillingStreet: Street
-    BillingCity: City
-    BillingState: State
-    BillingPostalCode: PostalCode
-    BillingCountry: Country
-    ShippingStreet: Street
-    ShippingCity: City
-    ShippingState: State
-    ShippingPostalCode: PostalCode
-    ShippingCountry: Country
-    Phone: Phone
-    Fax: Fax
-    Website: Website
-    NumberOfEmployees: NumberOfEmployees
-    AccountNumber: AccountNumber
-    Site: Site
-    Type: Type
-Insert Contacts:
-  sf_object: Contact
-  table: contacts
-  fields:
-    Salutation: salutation
-    FirstName: firstname
-    LastName: lastname
-    Email: email
-    Phone: phone
-    MobilePhone: mobile
-    OtherPhone: OtherPhone
-    HomePhone: HomePhone
-    Title: title
-    Birthdate: birthdate
-    MailingStreet: mailingstreet
-    MailingCity: mailingcity
-    MailingState: mailingstate
-    MailingPostalCode: mailingpostalcode
-    MailingCountry: mailingcountry
+    Name: name
+    npsp__Funding_Focus__c: funding_focus
+    npsp__Grantmaker__c: grantmaker
+    npsp__Matching_Gift_Administrator_Name__c: matching_gift_administrator_name
+    npsp__Matching_Gift_Amount_Max__c: matching_gift_amount_max
+    npsp__Matching_Gift_Amount_Min__c: matching_gift_amount_min
+    npsp__Matching_Gift_Annual_Employee_Max__c: matching_gift_annual_employee_max
+    npsp__Matching_Gift_Comments__c: matching_gift_comments
+    npsp__Matching_Gift_Company__c: matching_gift_company
+    npsp__Matching_Gift_Email__c: matching_gift_email
+    npsp__Matching_Gift_Info_Updated__c: matching_gift_info_updated
+    npsp__Matching_Gift_Percent__c: matching_gift_percent
+    npsp__Matching_Gift_Phone__c: matching_gift_phone
+    npsp__Matching_Gift_Request_Deadline__c: matching_gift_request_deadline
+    npsp__Membership_Span__c: membership_span
+    npsp__Membership_Status__c: membership_status
+    npsp__Number_of_Household_Members__c: number_of_household_members
+    npe01__SYSTEMIsIndividual__c: npe01__systemisindividual
   lookups:
-    AccountId:
-      table: accounts
+    npsp__Batch__c:
+      table: batch__c
+Insert npsp__Address__c:
+  sf_object: npsp__Address__c
+  table: address__c
+  fields:
+    npsp__API_Response__c: api_response
+    npsp__Address_Type__c: address_type
+    npsp__Administrative_Area__c: administrative_area
+    npsp__Ambiguous__c: ambiguous
+    npsp__Congressional_District__c: congressional_district
+    npsp__County_Name__c: county_name
+    npsp__Default_Address__c: default_address
+    # SKIP: Cannot query compound fields in Bulk API
+    #npsp__Geolocation__c: geolocation
+    npsp__Latest_End_Date__c: latest_end_date
+    npsp__Latest_Start_Date__c: latest_start_date
+    npsp__MailingCity__c: mailingcity
+    npsp__MailingCountry__c: mailingcountry
+    npsp__MailingPostalCode__c: mailingpostalcode
+    npsp__MailingState__c: mailingstate
+    npsp__MailingStreet2__c: mailingstreet2
+    npsp__MailingStreet__c: mailingstreet
+    npsp__Pre_Verification_Address__c: pre_verification_address
+    npsp__Seasonal_End_Day__c: seasonal_end_day
+    npsp__Seasonal_End_Month__c: seasonal_end_month
+    npsp__Seasonal_Start_Day__c: seasonal_start_day
+    npsp__Seasonal_Start_Month__c: seasonal_start_month
+    npsp__State_Lower_District__c: state_lower_district
+    npsp__State_Upper_District__c: state_upper_district
+    npsp__Verification_Status__c: verification_status
+    npsp__Verified__c: verified
+  lookups:
+    npsp__Household_Account__c:
+      table: account
+Insert Contact:
+  sf_object: Contact
+  table: contact
+  fields:
+    Name: name
+    npsp__Address_Verification_Status__c: address_verification_status
+    npsp__Deceased__c: deceased
+    DoNotCall: donotcall
+    npsp__Do_Not_Contact__c: do_not_contact
+    npsp__Exclude_from_Household_Formal_Greeting__c: exclude_from_household_formal_greeting
+    npsp__Exclude_from_Household_Informal_Greeting__c: exclude_from_household_informal_greeting
+    npsp__Exclude_from_Household_Name__c: exclude_from_household_name
+    npsp__First_Soft_Credit_Amount__c: first_soft_credit_amount
+    npsp__First_Soft_Credit_Date__c: first_soft_credit_date
+    npsp__HHId__c: hhid
+    HasOptedOutOfEmail: hasoptedoutofemail
+    HasOptedOutOfFax: hasoptedoutoffax
+    IsEmailBounced: isemailbounced
+    npsp__Largest_Soft_Credit_Amount__c: largest_soft_credit_amount
+    npsp__Largest_Soft_Credit_Date__c: largest_soft_credit_date
+    LastName: lastname
+    npsp__Last_Soft_Credit_Amount__c: last_soft_credit_amount
+    npsp__Last_Soft_Credit_Date__c: last_soft_credit_date
+    npsp__Number_of_Soft_Credits_Last_N_Days__c: number_of_soft_credits_last_n_days
+    npsp__Number_of_Soft_Credits_Last_Year__c: number_of_soft_credits_last_year
+    npsp__Number_of_Soft_Credits_This_Year__c: number_of_soft_credits_this_year
+    npsp__Number_of_Soft_Credits_Two_Years_Ago__c: number_of_soft_credits_two_years_ago
+    npsp__Number_of_Soft_Credits__c: number_of_soft_credits
+    npsp__Primary_Contact__c: primary_contact
+    npsp__Soft_Credit_Last_N_Days__c: soft_credit_last_n_days
+    npsp__is_Address_Override__c: is_address_override
+    npe01__Private__c: npe01__private
+  lookups:
+    npsp__Batch__c:
+      table: batch__c
+    npsp__Current_Address__c:
+      table: address__c
+    npsp__Primary_Affiliation__c:
+      table: account
+Insert npsp__Engagement_Plan_Task__c:
+  sf_object: npsp__Engagement_Plan_Task__c
+  table: engagement_plan_task__c
+  fields:
+    Name: name
+    npsp__Comments__c: comments
+    npsp__Days_After__c: days_after
+    npsp__Priority__c: priority
+    npsp__Reminder_Time__c: reminder_time
+    npsp__Reminder__c: reminder
+    npsp__Send_Email__c: send_email
+    npsp__Status__c: status
+    npsp__Type__c: type
+  lookups:
+    npsp__Assigned_To__c:
+      table: user
+    npsp__Engagement_Plan_Template__c:
+      table: engagement_plan_template__c
+    npsp__Parent_Task__c:
+      table: engagement_plan_task__c
+Insert npsp__Engagement_Plan_Template__c:
+  sf_object: npsp__Engagement_Plan_Template__c
+  table: engagement_plan_template__c
+  fields:
+    Name: name
+    npsp__Automatically_Update_Child_Task_Due_Date__c: automatically_update_child_task_due_date
+    npsp__Default_Assignee__c: default_assignee
+    npsp__Description__c: description
+    npsp__Reschedule_To__c: reschedule_to
+    npsp__Skip_Weekends__c: skip_weekends
+    npsp__Total_Engagement_Plans__c: total_engagement_plans
+    npsp__Total_Tasks__c: total_tasks
+Insert Opportunity:
+  sf_object: Opportunity
+  table: opportunity
+  fields:
+    Name: name
+    npsp__Acknowledgment_Date__c: acknowledgment_date
+    npsp__Acknowledgment_Status__c: acknowledgment_status
+    npsp__Ask_Date__c: ask_date
+    CloseDate: closedate
+    npsp__Closed_Lost_Reason__c: closed_lost_reason
+    npsp__DisableContactRoleAutomation__c: disablecontactroleautomation
+    npsp__Fair_Market_Value__c: fair_market_value
+    ForecastCategory: forecastcategory
+    npsp__Gift_Strategy__c: gift_strategy
+    npsp__Grant_Contract_Date__c: grant_contract_date
+    npsp__Grant_Contract_Number__c: grant_contract_number
+    npsp__Grant_Period_End_Date__c: grant_period_end_date
+    npsp__Grant_Period_Start_Date__c: grant_period_start_date
+    npsp__Grant_Program_Area_s__c: grant_program_area_s
+    npsp__Grant_Requirements_Website__c: grant_requirements_website
+    HasOpenActivity: hasopenactivity
+    HasOpportunityLineItem: hasopportunitylineitem
+    HasOverdueTask: hasoverduetask
+    npsp__Honoree_Name__c: honoree_name
+    npsp__In_Kind_Description__c: in_kind_description
+    npsp__In_Kind_Donor_Declared_Value__c: in_kind_donor_declared_value
+    npsp__In_Kind_Type__c: in_kind_type
+    IsClosed: isclosed
+    IsPrivate: isprivate
+    IsWon: iswon
+    npsp__Is_Grant_Renewal__c: is_grant_renewal
+    npsp__Matching_Gift_Employer__c: matching_gift_employer
+    npsp__Matching_Gift_Status__c: matching_gift_status
+    npsp__Next_Grant_Deadline_Due_Date__c: next_grant_deadline_due_date
+    npsp__Notification_Message__c: notification_message
+    npsp__Notification_Preference__c: notification_preference
+    npsp__Notification_Recipient_Information__c: notification_recipient_information
+    npsp__Notification_Recipient_Name__c: notification_recipient_name
+    npsp__Primary_Contact_Campaign_Member_Status__c: primary_contact_campaign_member_status
+    npsp__Qualified_Date__c: qualified_date
+    npsp__Recurring_Donation_Installment_Name__c: recurring_donation_installment_name
+    npsp__Recurring_Donation_Installment_Number__c: recurring_donation_installment_number
+    npsp__Requested_Amount__c: requested_amount
+    StageName: stagename
+    npsp__Tribute_Type__c: tribute_type
+    npe01__Do_Not_Automatically_Create_Payment__c: npe01__do_not_automatically_create_payment
+  lookups:
+    npsp__Batch__c:
+      table: batch__c
+    npsp__Honoree_Contact__c:
+      table: contact
+    npsp__Matching_Gift_Account__c:
+      table: account
+    npsp__Matching_Gift__c:
+      table: opportunity
+    npsp__Notification_Recipient_Contact__c:
+      table: contact
+    npsp__Previous_Grant_Opportunity__c:
+      table: opportunity
+    npsp__Primary_Contact__c:
+      table: contact
+Insert User:
+  sf_object: User
+  table: user
+  fields:
+    Name: name
+    Alias: alias
+    CommunityNickname: communitynickname
+    DefaultGroupNotificationFrequency: defaultgroupnotificationfrequency
+    DigestFrequency: digestfrequency
+    Email: email
+    EmailEncodingKey: emailencodingkey
+    EmailPreferencesAutoBcc: emailpreferencesautobcc
+    EmailPreferencesAutoBccStayInTouch: emailpreferencesautobccstayintouch
+    EmailPreferencesStayInTouchReminder: emailpreferencesstayintouchreminder
+    ForecastEnabled: forecastenabled
+    IsActive: isactive
+    IsExtIndicatorVisible: isextindicatorvisible
+    IsProfilePhotoActive: isprofilephotoactive
+    LanguageLocaleKey: languagelocalekey
+    LastName: lastname
+    LocaleSidKey: localesidkey
+    ProfileId: profileid
+    ReceivesAdminInfoEmails: receivesadmininfoemails
+    ReceivesInfoEmails: receivesinfoemails
+    TimeZoneSidKey: timezonesidkey
+    UserPermissionsCallCenterAutoLogin: userpermissionscallcenterautologin
+    UserPermissionsInteractionUser: userpermissionsinteractionuser
+    UserPermissionsJigsawProspectingUser: userpermissionsjigsawprospectinguser
+    UserPermissionsKnowledgeUser: userpermissionsknowledgeuser
+    UserPermissionsMarketingUser: userpermissionsmarketinguser
+    UserPermissionsMobileUser: userpermissionsmobileuser
+    UserPermissionsOfflineUser: userpermissionsofflineuser
+    UserPermissionsSFContentUser: userpermissionssfcontentuser
+    UserPermissionsSiteforceContributorUser: userpermissionssiteforcecontributoruser
+    UserPermissionsSiteforcePublisherUser: userpermissionssiteforcepublisheruser
+    UserPermissionsSupportUser: userpermissionssupportuser
+    UserPermissionsWorkDotComUserFeature: userpermissionsworkdotcomuserfeature
+    UserPreferencesActivityRemindersPopup: userpreferencesactivityreminderspopup
+    UserPreferencesApexPagesDeveloperMode: userpreferencesapexpagesdevelopermode
+    UserPreferencesCacheDiagnostics: userpreferencescachediagnostics
+    UserPreferencesContentEmailAsAndWhen: userpreferencescontentemailasandwhen
+    UserPreferencesContentNoEmail: userpreferencescontentnoemail
+    UserPreferencesCreateLEXAppsWTShown: userpreferencescreatelexappswtshown
+    UserPreferencesDisCommentAfterLikeEmail: userpreferencesdiscommentafterlikeemail
+    UserPreferencesDisMentionsCommentEmail: userpreferencesdismentionscommentemail
+    UserPreferencesDisProfPostCommentEmail: userpreferencesdisprofpostcommentemail
+    UserPreferencesDisableAllFeedsEmail: userpreferencesdisableallfeedsemail
+    UserPreferencesDisableBookmarkEmail: userpreferencesdisablebookmarkemail
+    UserPreferencesDisableChangeCommentEmail: userpreferencesdisablechangecommentemail
+    UserPreferencesDisableEndorsementEmail: userpreferencesdisableendorsementemail
+    UserPreferencesDisableFeedbackEmail: userpreferencesdisablefeedbackemail
+    UserPreferencesDisableFileShareNotificationsForApi: userpreferencesdisablefilesharenotificationsforapi
+    UserPreferencesDisableFollowersEmail: userpreferencesdisablefollowersemail
+    UserPreferencesDisableLaterCommentEmail: userpreferencesdisablelatercommentemail
+    UserPreferencesDisableLikeEmail: userpreferencesdisablelikeemail
+    UserPreferencesDisableMentionsPostEmail: userpreferencesdisablementionspostemail
+    UserPreferencesDisableMessageEmail: userpreferencesdisablemessageemail
+    UserPreferencesDisableProfilePostEmail: userpreferencesdisableprofilepostemail
+    UserPreferencesDisableSharePostEmail: userpreferencesdisablesharepostemail
+    UserPreferencesDisableWorkEmail: userpreferencesdisableworkemail
+    UserPreferencesEnableAutoSubForFeeds: userpreferencesenableautosubforfeeds
+    UserPreferencesEventRemindersCheckboxDefault: userpreferenceseventreminderscheckboxdefault
+    UserPreferencesExcludeMailAppAttachments: userpreferencesexcludemailappattachments
+    UserPreferencesFavoritesShowTopFavorites: userpreferencesfavoritesshowtopfavorites
+    UserPreferencesFavoritesWTShown: userpreferencesfavoriteswtshown
+    UserPreferencesGlobalNavBarWTShown: userpreferencesglobalnavbarwtshown
+    UserPreferencesGlobalNavGridMenuWTShown: userpreferencesglobalnavgridmenuwtshown
+    UserPreferencesHasCelebrationBadge: userpreferenceshascelebrationbadge
+    UserPreferencesHideBiggerPhotoCallout: userpreferenceshidebiggerphotocallout
+    UserPreferencesHideCSNDesktopTask: userpreferenceshidecsndesktoptask
+    UserPreferencesHideCSNGetChatterMobileTask: userpreferenceshidecsngetchattermobiletask
+    UserPreferencesHideChatterOnboardingSplash: userpreferenceshidechatteronboardingsplash
+    UserPreferencesHideEndUserOnboardingAssistantModal: userpreferenceshideenduseronboardingassistantmodal
+    UserPreferencesHideLightningMigrationModal: userpreferenceshidelightningmigrationmodal
+    UserPreferencesHideS1BrowserUI: userpreferenceshides1browserui
+    UserPreferencesHideSecondChatterOnboardingSplash: userpreferenceshidesecondchatteronboardingsplash
+    UserPreferencesHideSfxWelcomeMat: userpreferenceshidesfxwelcomemat
+    UserPreferencesJigsawListUser: userpreferencesjigsawlistuser
+    UserPreferencesLightningExperiencePreferred: userpreferenceslightningexperiencepreferred
+    UserPreferencesNewLightningReportRunPageEnabled: userpreferencesnewlightningreportrunpageenabled
+    UserPreferencesPathAssistantCollapsed: userpreferencespathassistantcollapsed
+    UserPreferencesPreviewCustomTheme: userpreferencespreviewcustomtheme
+    UserPreferencesPreviewLightning: userpreferencespreviewlightning
+    UserPreferencesRecordHomeReservedWTShown: userpreferencesrecordhomereservedwtshown
+    UserPreferencesRecordHomeSectionCollapseWTShown: userpreferencesrecordhomesectioncollapsewtshown
+    UserPreferencesReminderSoundOff: userpreferencesremindersoundoff
+    UserPreferencesShowCityToExternalUsers: userpreferencesshowcitytoexternalusers
+    UserPreferencesShowCityToGuestUsers: userpreferencesshowcitytoguestusers
+    UserPreferencesShowCountryToExternalUsers: userpreferencesshowcountrytoexternalusers
+    UserPreferencesShowCountryToGuestUsers: userpreferencesshowcountrytoguestusers
+    UserPreferencesShowEmailToExternalUsers: userpreferencesshowemailtoexternalusers
+    UserPreferencesShowEmailToGuestUsers: userpreferencesshowemailtoguestusers
+    UserPreferencesShowFaxToExternalUsers: userpreferencesshowfaxtoexternalusers
+    UserPreferencesShowFaxToGuestUsers: userpreferencesshowfaxtoguestusers
+    UserPreferencesShowManagerToExternalUsers: userpreferencesshowmanagertoexternalusers
+    UserPreferencesShowManagerToGuestUsers: userpreferencesshowmanagertoguestusers
+    UserPreferencesShowMobilePhoneToExternalUsers: userpreferencesshowmobilephonetoexternalusers
+    UserPreferencesShowMobilePhoneToGuestUsers: userpreferencesshowmobilephonetoguestusers
+    UserPreferencesShowPostalCodeToExternalUsers: userpreferencesshowpostalcodetoexternalusers
+    UserPreferencesShowPostalCodeToGuestUsers: userpreferencesshowpostalcodetoguestusers
+    UserPreferencesShowProfilePicToGuestUsers: userpreferencesshowprofilepictoguestusers
+    UserPreferencesShowStateToExternalUsers: userpreferencesshowstatetoexternalusers
+    UserPreferencesShowStateToGuestUsers: userpreferencesshowstatetoguestusers
+    UserPreferencesShowStreetAddressToExternalUsers: userpreferencesshowstreetaddresstoexternalusers
+    UserPreferencesShowStreetAddressToGuestUsers: userpreferencesshowstreetaddresstoguestusers
+    UserPreferencesShowTitleToExternalUsers: userpreferencesshowtitletoexternalusers
+    UserPreferencesShowTitleToGuestUsers: userpreferencesshowtitletoguestusers
+    UserPreferencesShowWorkPhoneToExternalUsers: userpreferencesshowworkphonetoexternalusers
+    UserPreferencesShowWorkPhoneToGuestUsers: userpreferencesshowworkphonetoguestusers
+    UserPreferencesSortFeedByComment: userpreferencessortfeedbycomment
+    UserPreferencesSuppressEventSFXReminders: userpreferencessuppresseventsfxreminders
+    UserPreferencesSuppressTaskSFXReminders: userpreferencessuppresstasksfxreminders
+    UserPreferencesTaskRemindersCheckboxDefault: userpreferencestaskreminderscheckboxdefault
+    UserPreferencesUserDebugModePref: userpreferencesuserdebugmodepref
+    Username: username
+Insert Campaign:
+  sf_object: Campaign
+  table: campaign
+  fields:
+    Name: name
+    AmountAllOpportunities: amountallopportunities
+    AmountWonOpportunities: amountwonopportunities
+    IsActive: isactive
+    NumberOfContacts: numberofcontacts
+    NumberOfConvertedLeads: numberofconvertedleads
+    NumberOfLeads: numberofleads
+    NumberOfOpportunities: numberofopportunities
+    NumberOfResponses: numberofresponses
+    NumberOfWonOpportunities: numberofwonopportunities
+Insert Case:
+  sf_object: Case
+  table: case
+  fields:
+    CaseNumber: casenumber
+    IsClosed: isclosed
+    IsEscalated: isescalated
+Insert npsp__DataImportBatch__c:
+  sf_object: npsp__DataImportBatch__c
+  table: dataimportbatch__c
+  fields:
+    Name: name
+    npsp__Account_Custom_Unique_ID__c: account_custom_unique_id
+    npsp__Active_Fields__c: active_fields
+    npsp__Batch_Description__c: batch_description
+    npsp__Batch_Process_Size__c: batch_process_size
+    npsp__Contact_Custom_Unique_ID__c: contact_custom_unique_id
+    npsp__Contact_Matching_Rule__c: contact_matching_rule
+    npsp__Donation_Date_Range__c: donation_date_range
+    npsp__Donation_Matching_Behavior__c: donation_matching_behavior
+    npsp__Donation_Matching_Implementing_Class__c: donation_matching_implementing_class
+    npsp__Donation_Matching_Rule__c: donation_matching_rule
+    npsp__Expected_Count_of_Gifts__c: expected_count_of_gifts
+    npsp__Expected_Total_Batch_Amount__c: expected_total_batch_amount
+    npsp__GiftBatch__c: giftbatch
+    npsp__Last_Processed_On__c: last_processed_on
+    npsp__Post_Process_Implementing_Class__c: post_process_implementing_class
+    npsp__Process_Using_Scheduled_Job__c: process_using_scheduled_job
+    npsp__Records_Failed__c: records_failed
+    npsp__Records_Successfully_Processed__c: records_successfully_processed
+    npsp__RequireTotalMatch__c: requiretotalmatch
+    npsp__Run_Opportunity_Rollups_while_Processing__c: run_opportunity_rollups_while_processing
+Insert npsp__General_Accounting_Unit__c:
+  sf_object: npsp__General_Accounting_Unit__c
+  table: general_accounting_unit__c
+  fields:
+    Name: name
+    npsp__Active__c: active
+    npsp__Average_Allocation__c: average_allocation
+    npsp__Description__c: description
+    npsp__First_Allocation_Date__c: first_allocation_date
+    npsp__Largest_Allocation__c: largest_allocation
+    npsp__Last_Allocation_Date__c: last_allocation_date
+    npsp__Number_of_Allocations_Last_N_Days__c: number_of_allocations_last_n_days
+    npsp__Number_of_Allocations_Last_Year__c: number_of_allocations_last_year
+    npsp__Number_of_Allocations_This_Year__c: number_of_allocations_this_year
+    npsp__Number_of_Allocations_Two_Years_Ago__c: number_of_allocations_two_years_ago
+    npsp__Smallest_Allocation__c: smallest_allocation
+    npsp__Total_Allocations_Last_N_Days__c: total_allocations_last_n_days
+    npsp__Total_Allocations_Last_Year__c: total_allocations_last_year
+    npsp__Total_Allocations_This_Year__c: total_allocations_this_year
+    npsp__Total_Allocations_Two_Years_Ago__c: total_allocations_two_years_ago
+    npsp__Total_Allocations__c: total_allocations
+    npsp__Total_Number_of_Allocations__c: total_number_of_allocations
+Insert npe01__OppPayment__c:
+  sf_object: npe01__OppPayment__c
+  table: npe01__opppayment__c
+  fields:
+    npsp__Payment_Acknowledged_Date__c: payment_acknowledged_date
+    npsp__Payment_Acknowledgment_Status__c: payment_acknowledgment_status
+    npe01__Opportunity__c: npe01__opportunity
+    npe01__Paid__c: npe01__paid
+    npe01__Written_Off__c: npe01__written_off
+Insert npe03__Recurring_Donation__c:
+  sf_object: npe03__Recurring_Donation__c
+  table: npe03__recurring_donation__c
+  fields:
+    Name: name
+    npsp__Always_Use_Last_Day_Of_Month__c: always_use_last_day_of_month
+    npsp__Day_of_Month__c: day_of_month
+Insert npsp__Account_Soft_Credit__c:
+  sf_object: npsp__Account_Soft_Credit__c
+  table: account_soft_credit__c
+  fields:
+    npsp__Amount__c: amount
+    npsp__Role__c: role
+  lookups:
+    npsp__Account__c:
+      table: account
+    npsp__Opportunity__c:
+      table: opportunity
+Insert npsp__Allocation__c:
+  sf_object: npsp__Allocation__c
+  table: allocation__c
+  fields:
+    npsp__Amount__c: amount
+    npsp__Percent__c: percent
+  lookups:
+    npsp__Campaign__c:
+      table: campaign
+    npsp__General_Accounting_Unit__c:
+      table: general_accounting_unit__c
+    npsp__Opportunity__c:
+      table: opportunity
+    npsp__Payment__c:
+      table: npe01__opppayment__c
+    npsp__Recurring_Donation__c:
+      table: npe03__recurring_donation__c
+Insert npsp__DataImport__c:
+  sf_object: npsp__DataImport__c
+  table: dataimport__c
+  fields:
+    npsp__Account1ImportStatus__c: account1importstatus
+    npsp__Account1_City__c: account1_city
+    npsp__Account1_Country__c: account1_country
+    npsp__Account1_Name__c: account1_name
+    npsp__Account1_Phone__c: account1_phone
+    npsp__Account1_State_Province__c: account1_state_province
+    npsp__Account1_Street__c: account1_street
+    npsp__Account1_Website__c: account1_website
+    npsp__Account1_Zip_Postal_Code__c: account1_zip_postal_code
+    npsp__Account2ImportStatus__c: account2importstatus
+    npsp__Account2_City__c: account2_city
+    npsp__Account2_Country__c: account2_country
+    npsp__Account2_Name__c: account2_name
+    npsp__Account2_Phone__c: account2_phone
+    npsp__Account2_State_Province__c: account2_state_province
+    npsp__Account2_Street__c: account2_street
+    npsp__Account2_Website__c: account2_website
+    npsp__Account2_Zip_Postal_Code__c: account2_zip_postal_code
+    npsp__ApexJobId__c: apexjobid
+    npsp__Campaign_Member_Status__c: campaign_member_status
+    npsp__Contact1ImportStatus__c: contact1importstatus
+    npsp__Contact1_Alternate_Email__c: contact1_alternate_email
+    npsp__Contact1_Birthdate__c: contact1_birthdate
+    npsp__Contact1_Firstname__c: contact1_firstname
+    npsp__Contact1_Home_Phone__c: contact1_home_phone
+    npsp__Contact1_Lastname__c: contact1_lastname
+    npsp__Contact1_Mobile_Phone__c: contact1_mobile_phone
+    npsp__Contact1_Other_Phone__c: contact1_other_phone
+    npsp__Contact1_Personal_Email__c: contact1_personal_email
+    npsp__Contact1_Preferred_Email__c: contact1_preferred_email
+    npsp__Contact1_Preferred_Phone__c: contact1_preferred_phone
+    npsp__Contact1_Salutation__c: contact1_salutation
+    npsp__Contact1_Title__c: contact1_title
+    npsp__Contact1_Work_Email__c: contact1_work_email
+    npsp__Contact1_Work_Phone__c: contact1_work_phone
+    npsp__Contact2ImportStatus__c: contact2importstatus
+    npsp__Contact2_Alternate_Email__c: contact2_alternate_email
+    npsp__Contact2_Birthdate__c: contact2_birthdate
+    npsp__Contact2_Firstname__c: contact2_firstname
+    npsp__Contact2_Home_Phone__c: contact2_home_phone
+    npsp__Contact2_Lastname__c: contact2_lastname
+    npsp__Contact2_Mobile_Phone__c: contact2_mobile_phone
+    npsp__Contact2_Other_Phone__c: contact2_other_phone
+    npsp__Contact2_Personal_Email__c: contact2_personal_email
+    npsp__Contact2_Preferred_Email__c: contact2_preferred_email
+    npsp__Contact2_Preferred_Phone__c: contact2_preferred_phone
+    npsp__Contact2_Salutation__c: contact2_salutation
+    npsp__Contact2_Title__c: contact2_title
+    npsp__Contact2_Work_Email__c: contact2_work_email
+    npsp__Contact2_Work_Phone__c: contact2_work_phone
+    npsp__DonationCampaignImportStatus__c: donationcampaignimportstatus
+    npsp__DonationImportStatus__c: donationimportstatus
+    npsp__Donation_Amount__c: donation_amount
+    npsp__Donation_Campaign_Name__c: donation_campaign_name
+    npsp__Donation_Date__c: donation_date
+    npsp__Donation_Description__c: donation_description
+    npsp__Donation_Donor__c: donation_donor
+    npsp__Donation_Member_Level__c: donation_member_level
+    npsp__Donation_Membership_End_Date__c: donation_membership_end_date
+    npsp__Donation_Membership_Origin__c: donation_membership_origin
+    npsp__Donation_Membership_Start_Date__c: donation_membership_start_date
+    npsp__Donation_Name__c: donation_name
+    npsp__Donation_Possible_Matches__c: donation_possible_matches
+    npsp__Donation_Record_Type_Name__c: donation_record_type_name
+    npsp__Donation_Stage__c: donation_stage
+    npsp__Donation_Type__c: donation_type
+    npsp__FailureInformation__c: failureinformation
+    npsp__HomeAddressImportStatus__c: homeaddressimportstatus
+    npsp__Home_City__c: home_city
+    npsp__Home_Country__c: home_country
+    npsp__Home_State_Province__c: home_state_province
+    npsp__Home_Street__c: home_street
+    npsp__Home_Zip_Postal_Code__c: home_zip_postal_code
+    npsp__Household_Phone__c: household_phone
+    npsp__ImportedDate__c: importeddate
+    npsp__PaymentImportStatus__c: paymentimportstatus
+    npsp__Payment_Check_Reference_Number__c: payment_check_reference_number
+    npsp__Payment_Method__c: payment_method
+    npsp__Payment_Possible_Matches__c: payment_possible_matches
+    npsp__Status__c: status
+  lookups:
+    npsp__Account1Imported__c:
+      table: account
+    npsp__Account2Imported__c:
+      table: account
+    npsp__Contact1Imported__c:
+      table: contact
+    npsp__Contact2Imported__c:
+      table: contact
+    npsp__DonationCampaignImported__c:
+      table: campaign
+    npsp__DonationImported__c:
+      table: opportunity
+    npsp__HomeAddressImported__c:
+      table: address__c
+    npsp__HouseholdAccountImported__c:
+      table: account
+    npsp__NPSP_Data_Import_Batch__c:
+      table: dataimportbatch__c
+    npsp__PaymentImported__c:
+      table: npe01__opppayment__c
+Insert npsp__Engagement_Plan__c:
+  sf_object: npsp__Engagement_Plan__c
+  table: engagement_plan__c
+  fields:
+    npsp__Completed_Tasks__c: completed_tasks
+    npsp__Status__c: status
+    npsp__Total_EP_Tasks__c: total_ep_tasks
+    npsp__Total_Tasks__c: total_tasks
+  lookups:
+    npsp__Account__c:
+      table: account
+    npsp__Campaign__c:
+      table: campaign
+    npsp__Case__c:
+      table: case
+    npsp__Contact__c:
+      table: contact
+    npsp__Engagement_Plan_Template__c:
+      table: engagement_plan_template__c
+    npsp__Opportunity__c:
+      table: opportunity
+    npsp__Recurring_Donation__c:
+      table: npe03__recurring_donation__c
+Insert npsp__Error__c:
+  sf_object: npsp__Error__c
+  table: error__c
+  fields:
+    npsp__Context_Type__c: context_type
+    npsp__Datetime__c: datetime
+    npsp__Email_Sent__c: email_sent
+    npsp__Error_Type__c: error_type
+    npsp__Full_Message__c: full_message
+    npsp__Object_Type__c: object_type
+    npsp__Posted_in_Chatter__c: posted_in_chatter
+    npsp__Record_URL__c: record_url
+    npsp__Stack_Trace__c: stack_trace
+Insert npsp__Grant_Deadline__c:
+  sf_object: npsp__Grant_Deadline__c
+  table: grant_deadline__c
+  fields:
+    Name: name
+    npsp__Grant_Deadline_Due_Date__c: grant_deadline_due_date
+    npsp__Grant_Deliverable_Close_Date__c: grant_deliverable_close_date
+    npsp__Grant_Deliverable_Requirements__c: grant_deliverable_requirements
+    npsp__Type__c: type
+  lookups:
+    npsp__Opportunity__c:
+      table: opportunity
+Insert Lead:
+  sf_object: Lead
+  table: lead
+  fields:
+    Name: name
+    Company: company
+    npsp__CompanyCity__c: companycity
+    npsp__CompanyCountry__c: companycountry
+    npsp__CompanyPostalCode__c: companypostalcode
+    npsp__CompanyState__c: companystate
+    npsp__CompanyStreet__c: companystreet
+    DoNotCall: donotcall
+    HasOptedOutOfEmail: hasoptedoutofemail
+    HasOptedOutOfFax: hasoptedoutoffax
+    IsConverted: isconverted
+    IsUnreadByOwner: isunreadbyowner
+    LastName: lastname
+    Status: status
+  lookups:
+    npsp__Batch__c:
+      table: batch__c
+Insert npsp__Level__c:
+  sf_object: npsp__Level__c
+  table: level__c
+  fields:
+    Name: name
+    npsp__Active__c: active
+    npsp__Description__c: description
+    npsp__Level_Field__c: level_field
+    npsp__Maximum_Amount__c: maximum_amount
+    npsp__Minimum_Amount__c: minimum_amount
+    npsp__Previous_Level_Field__c: previous_level_field
+    npsp__Source_Field__c: source_field
+    npsp__Target__c: target
+  lookups:
+    npsp__Engagement_Plan_Template__c:
+      table: engagement_plan_template__c
+Insert npsp__Partial_Soft_Credit__c:
+  sf_object: npsp__Partial_Soft_Credit__c
+  table: partial_soft_credit__c
+  fields:
+    npsp__Amount__c: amount
+    npsp__Contact_Name__c: contact_name
+    npsp__Contact_Role_ID__c: contact_role_id
+    npsp__Role_Name__c: role_name
+  lookups:
+    npsp__Contact__c:
+      table: contact
+    npsp__Opportunity__c:
+      table: opportunity
+Insert npsp__Schedulable__c:
+  sf_object: npsp__Schedulable__c
+  table: schedulable__c
+  fields:
+    Name: name
+    npsp__Active__c: active
+    npsp__Class_Name__c: class_name
+    npsp__Frequency__c: frequency
+    npsp__Last_Time_Run__c: last_time_run
+Insert npe4__Relationship__c:
+  sf_object: npe4__Relationship__c
+  table: npe4__relationship__c
+  fields:
+    npsp__Related_Opportunity_Contact_Role__c: related_opportunity_contact_role
+    npe4__Contact__c: npe4ontact
+    npe4__SYSTEM_SystemCreated__c: npe4__system_systemcreated
+Insert npe5__Affiliation__c:
+  sf_object: npe5__Affiliation__c
+  table: npe5__affiliation__c
+  fields:
+    npsp__Related_Opportunity_Contact_Role__c: related_opportunity_contact_role
+    npe5__Contact__c: npe5ontact
+    npe5__Organization__c: npe5__organization
+    npe5__Primary__c: npe5__primary
+Insert npo02__Household__c:
+  sf_object: npo02__Household__c
+  table: npo02__household__c
+  fields:
+    Name: name
+    npsp__Number_of_Household_Members__c: number_of_household_members
+    npo02__Always_Anonymous__c: npo02__always_anonymous
