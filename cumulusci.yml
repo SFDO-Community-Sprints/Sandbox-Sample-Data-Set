@@ -20,19 +20,6 @@ tasks:
             dir: unpackaged/config/trial
             subfolder: Cumulus-master/unpackaged/config/trial
 
-    download_reports_config:
-        class_path: cumulusci.tasks.util.DownloadZip
-        options:
-            url: "https://github.com/SalesforceFoundation/Cumulus/archive/master.zip"
-            dir: unpackaged/config/reports
-            subfolder: Cumulus-master/unpackaged/config/reports
-
-    deploy_reports_config:
-        class_path: cumulusci.tasks.salesforce.Deploy
-        options:
-            path: unpackaged/config/reports
-            namespace_inject: npsp
-
     deploy_trial_config:
         class_path: cumulusci.tasks.salesforce.Deploy
         options:
